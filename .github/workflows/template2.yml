@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          cd .github/template/ \
+          cd .github/template/ 
           .github/template/cpissues.sh 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
