@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - '**'
+    paths:
+      - '.github/templates/**'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
