@@ -8,12 +8,16 @@ on:
     paths:
       - '.github/templates/**'
 
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
 jobs:
-  cpissues:
-    name: "Copy Issues"
+  build:
+    name: Autograding
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
       - uses: actions/checkout@v2
       - run: .github/template/cpissues.sh
         env:
