@@ -1,0 +1,20 @@
+# This file should only be editted from the template
+name: Classroom Repo Init from Template
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - '.github/templates/**'
+
+jobs:
+  cpissues:
+    name: "Copy Issues"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+      - run: .github/template/cpissues.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
